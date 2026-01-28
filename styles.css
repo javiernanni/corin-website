@@ -39,11 +39,17 @@ body {
 .logo {
   height: 30px;
   width: auto;
+  display: block;
 }
 
 .nav {
   min-height: 30px;
   min-width: 40px;
+}
+
+.topbar a {
+  display: flex;
+  align-items: center;
 }
 
 .hero {
@@ -230,6 +236,7 @@ h1 {
   }
 
   .legal {
+    max-width: 720px;
     padding: 56px 56px 80px;
   }
 
