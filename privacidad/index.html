@@ -24,7 +24,7 @@
 
       <main class="legal">
         <h1>Política de Privacidad – Corin</h1>
-        <p><strong>Última actualización:</strong> 28/01/2026</p>
+        <p><strong>Última actualización:</strong> 24/02/2026</p>
         <p>
           En Corin nos tomamos la privacidad en serio. Esta Política explica qué
           datos se recopilan, cómo se usan y cuáles son tus derechos al utilizar
@@ -52,6 +52,20 @@
           <li>Datos necesarios para emitir comprobantes electrónicos ante AFIP</li>
         </ul>
 
+        <h3>Credenciales de ARCA/AFIP (para alta técnica)</h3>
+        <p>
+          Para habilitar la emisión de facturas en nombre del usuario, Corin
+          puede solicitar que el usuario ingrese sus credenciales de ARCA/AFIP
+          en un formulario seguro. Estas credenciales se envían al backend de
+          Corin y se procesan de forma automatizada para realizar
+          configuraciones/delegaciones en ARCA a través de <strong>AFIP SDK</strong>.
+        </p>
+        <p>
+          <strong>Corin no almacena</strong> estas credenciales ni están pensadas
+          para ser vistas por ninguna persona del equipo: se usan de manera
+          transitoria para completar el alta técnica.
+        </p>
+
         <p>Corin <strong>no solicita ni registra</strong>:</p>
         <ul>
           <li>contenidos clínicos o terapéuticos</li>
@@ -70,6 +84,9 @@
           <li>prestar y mejorar el funcionamiento de Corin</li>
           <li>registrar información administrativa enviada por el usuario</li>
           <li>asistir en la emisión de facturas electrónicas</li>
+          <li>
+            realizar el alta técnica y las configuraciones/delegaciones necesarias en ARCA/AFIP para habilitar la emisión de facturas en nombre del usuario
+          </li>
           <li>realizar mediciones de uso y mejoras del producto</li>
           <li>brindar soporte y comunicación relacionada con el servicio</li>
         </ul>
@@ -100,6 +117,9 @@
           <li>WhatsApp y proveedores de mensajería (por ejemplo, Twilio)</li>
           <li>servicios de infraestructura y hosting (por ejemplo, Railway)</li>
           <li>Web Services de AFIP</li>
+          <li>
+            AFIP SDK (para automatizar configuraciones y delegaciones en ARCA/AFIP)
+          </li>
           <li>APIs y servicios técnicos necesarios para la facturación electrónica y operación del sistema</li>
         </ul>
         <p>
@@ -109,11 +129,16 @@
         </p>
 
         <h2>5. Credenciales y datos sensibles</h2>
-        <p>Corin <strong>no almacena claves fiscales</strong> ni contraseñas sensibles del usuario.</p>
         <p>
-          En caso de que el usuario utilice mecanismos ofrecidos por servicios de
-          terceros para realizar delegaciones ante AFIP, lo hace bajo su propia
-          responsabilidad y conforme a las condiciones de dichos servicios.
+          Corin <strong>no almacena</strong> claves fiscales ni contraseñas
+          sensibles del usuario.
+        </p>
+        <p>
+          Para habilitar la facturación, Corin puede procesar credenciales de
+          ARCA/AFIP de forma transitoria (por ejemplo, para completar el alta
+          técnica y configurar delegaciones). Esto se hace de manera automatizada
+          a través de <strong>AFIP SDK</strong>. Corin no utiliza esas credenciales
+          para otros fines.
         </p>
 
         <h2>6. Almacenamiento y seguridad</h2>
@@ -129,6 +154,12 @@
 
         <h2>7. PDFs y comprobantes</h2>
         <p>Corin no almacena copias de los PDFs de las facturas emitidas.</p>
+        <p>
+          Corin puede generar la representación en PDF de las facturas emitidas
+          utilizando <strong>AFIP SDK</strong> y/o servicios de terceros
+          necesarios para la operación del sistema. El usuario es responsable de
+          descargar y conservar los comprobantes si así lo desea.
+        </p>
         <p>
           Los comprobantes pueden ser regenerados a partir de los datos fiscales
           almacenados (como numeración y CAE). Es responsabilidad del usuario

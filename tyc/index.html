@@ -27,7 +27,7 @@
 
       <main class="legal">
         <h1>Términos y Condiciones de Uso – Corin</h1>
-        <p><strong>Última actualización: </strong>28/01/2026</p>
+        <p><strong>Última actualización: </strong>24/02/2026</p>
         <p>
           Al utilizar Corin, aceptás estos Términos y Condiciones. Si no estás
           de acuerdo, por favor no uses el servicio.
@@ -46,7 +46,9 @@
           <li>registrar sesiones realizadas (pacientes y fechas)</li>
           <li>registrar pagos recibidos</li>
           <li>organizar información administrativa</li>
-          <li>asistir en la emisión de facturas electrónicas ante AFIP</li>
+          <li>
+            emitir facturas electrónicas en nombre del usuario (con autorización en ARCA/AFIP)
+          </li>
         </ul>
         <p>
           Corin <strong>no es un estudio contable</strong>,
@@ -103,15 +105,50 @@
         </p>
 
         <h2>4. Facturación electrónica y AFIP</h2>
+        <p>
+          <strong>Nuevo:</strong> Para emitir facturas electrónicas con Corin,
+          primero se debe completar un alta técnica en ARCA/AFIP.
+          <strong>Este paso es obligatorio</strong>: si no se completa, Corin no
+          puede emitir comprobantes en nombre del usuario.
+        </p>
+        <p>
+          El proceso es el siguiente:
+        </p>
+        <ol>
+          <li>
+            El usuario ingresa sus credenciales de ARCA/AFIP en un formulario
+            seguro.
+          </li>
+          <li>Esas credenciales se envían al backend de Corin.</li>
+          <li>
+            Se utilizan de forma automatizada (a través de
+            <strong>AFIP SDK</strong>) para conectarse a ARCA y realizar las
+            configuraciones/delegaciones necesarias.
+          </li>
+          <li>
+            <strong>Corin no almacena</strong> esas credenciales, y el proceso está
+            pensado para que no sea necesario que personal de Corin vea la clave del
+            usuario.
+          </li>
+          <li>
+            Una vez hecha la delegación, Corin puede emitir facturas usando su
+            CUIT como autorizado, en representación del CUIT del usuario que delegó.
+          </li>
+        </ol>
         <p>Cuando el usuario utiliza Corin para emitir facturas:</p>
         <ul>
           <li>
             La factura existe legalmente una vez que
-            <strong>AFIP autoriza el comprobante y otorga el CAE</strong>.
+            <strong>ARCA/AFIP autoriza el comprobante y otorga el CAE</strong>.
           </li>
           <li>
             Corin genera una representación en PDF del comprobante únicamente a
             fines informativos.
+          </li>
+          <li>
+            Corin puede generar la representación en PDF del comprobante a
+            través de <strong>AFIP SDK</strong> y/o servicios de terceros
+            necesarios para la operación del sistema.
           </li>
           <li>
             Corin <strong>no garantiza</strong> que AFIP autorice una factura si
@@ -127,20 +164,26 @@
           será responsable por la no emisión del comprobante.
         </p>
 
-        <h2>5. Credenciales y delegaciones AFIP</h2>
+        <h2>5. Credenciales y delegaciones ARCA/AFIP</h2>
         <p>
-          El usuario es responsable de realizar las delegaciones necesarias ante
-          AFIP para permitir la emisión de comprobantes electrónicos.
+          Para poder emitir comprobantes en nombre del usuario, Corin necesita
+          realizar una configuración inicial en ARCA/AFIP. Para eso, se solicita
+          que el usuario ingrese sus credenciales en un formulario seguro.
         </p>
         <p>
-          En caso de utilizar mecanismos automáticos ofrecidos por servicios de
-          terceros para gestionar dichas delegaciones, el usuario lo hace
-          <strong>bajo su propia responsabilidad</strong>, aceptando las
-          condiciones de dichos terceros.
+          Las credenciales se utilizan únicamente para completar el alta técnica
+          y realizar las configuraciones/delegaciones necesarias a través de
+          <strong>AFIP SDK</strong>. <strong>Corin no almacena</strong> estas
+          credenciales ni las utiliza para otros fines.
         </p>
         <p>
-          Corin <strong>no almacena claves fiscales</strong> ni credenciales
-          sensibles del usuario.
+          Al continuar, el usuario acepta y autoriza este uso puntual de sus
+          credenciales para habilitar la emisión de facturas en su nombre.
+        </p>
+        <p>
+          En caso de cancelación del servicio, es responsabilidad del usuario
+          revocar la autorización/delegación en ARCA para que Corin deje de emitir
+          comprobantes en su nombre (Corin puede brindar instrucciones).
         </p>
 
         <h2>6. PDFs y almacenamiento de comprobantes</h2>
